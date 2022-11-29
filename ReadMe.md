@@ -1,5 +1,18 @@
 # Avatar
 
+**IMPORTANT** : This project is still a work in Progress. More features will come later.
+
+## How to build 
+
+### Windows
+
+This project uses Visual Studio Code mainly, but you can still use directly VisualStudio.
+
+1. Install Visual Studio (at last the community edition) on your computer
+2. Install Visual Studio Code
+3. Install the C/C++ extension on VSCode by Microsoft
+4. Open a new instance of VSCode using the VS Developer Command Prompt (`code <dir-to-your-project-locally>`)
+5. Smash that `F5` button to build & run the project.
 
 ## How to get the OpenXR related files (includes + Loader) ?
 
