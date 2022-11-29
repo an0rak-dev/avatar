@@ -3,6 +3,7 @@
         "${workspaceFolder}/includes"
     ],
     "files.associations": {
-        "vector": "cpp"
+        "vector": "cpp",
+        "xstring": "cpp"
     }
 }

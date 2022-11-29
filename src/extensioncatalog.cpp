@@ -2,6 +2,8 @@
 
 #include "exception.hpp"
 
+#define EXTENSION_MAX_SIZE 64
+
 ExtensionCatalog::ExtensionCatalog() {
     XrResult openXrStatus = XR_SUCCESS;
     uint32_t extensionsCount = 0;
@@ -15,4 +17,17 @@ ExtensionCatalog::ExtensionCatalog() {
 
 ExtensionCatalog::~ExtensionCatalog() {
 
+}
+
+std::vector<const char*> ExtensionCatalog::extractEnabledExtensions(std::vector<const char*> wantedExtensions) const {
+    std::vector<const char*> result = {};
+    for (int i=0; i < wantedExtensions.size(); i++) {
+        for (int j=0; j < this->availableExtensions.size(); j++) {
+            if (0 == strncmp(wantedExtensions.at(i), this->availableExtensions.at(j).extensionName, EXTENSION_MAX_SIZE)) {
+                result.push_back(wantedExtensions.at(i));
+                break;
+            }
+        }
+    }
+    return result;
 }
