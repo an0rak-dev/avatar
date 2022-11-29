@@ -1,13 +1,14 @@
 #include <iostream>
-
-#include "thirdparties/openxr/openxr.h"
+#include "extensioncatalog.hpp"
 
 int main() {
-    XrResult openXrStatus = XR_SUCCESS;
-    uint32_t extensionsCount;
-    openXrStatus = xrEnumerateInstanceExtensionProperties(nullptr, 0, &extensionsCount, nullptr);
-    if (XR_FAILED(openXrStatus)) {
-        throw std::exception("Failed to count extensions.");
+    try {
+        ExtensionCatalog extensionsCatalog;
+    } catch (std::exception& ex) {
+        std::cerr << "An error occured." << std::endl
+            << ex.what() << std::endl;
+        return 1;
     }
+
     return 0;
 }

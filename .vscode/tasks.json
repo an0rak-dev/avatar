@@ -18,6 +18,7 @@
                 "/Zi",
                 "/EHsc",
                 "/std:c++latest",
+                "/DDEBUG",
                 "/I${workspaceFolder}\\includes",
                 "/Fe${workspaceFolder}\\bin\\debug\\avatar.exe",
                 "/Fd${workspaceFolder}\\bin\\debug\\",

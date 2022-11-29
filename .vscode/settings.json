@@ -1,5 +1,8 @@
 {
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/includes"
-    ]
+    ],
+    "files.associations": {
+        "vector": "cpp"
+    }
 }
