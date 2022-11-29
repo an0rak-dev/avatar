@@ -22,6 +22,7 @@
                 "/Fe${workspaceFolder}\\bin\\debug\\avatar.exe",
                 "/Fd${workspaceFolder}\\bin\\debug\\",
                 "/Fo${workspaceFolder}\\bin\\debug\\",
+                "${workspaceFolder}\\lib\\statics\\openxr_loader.lib",
                 "${workspaceFolder}\\src\\*.cpp"
             ],
             "options": {
