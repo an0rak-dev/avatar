@@ -16,6 +16,9 @@
 #define APP_VERSION 0
 #endif
 
+#include "thirdparties/openxr/openxr.h"
+#include "exception.hpp"
+
 int main() {
     try {
         ExtensionCatalog extensionsCatalog;
@@ -24,6 +27,7 @@ int main() {
         });
 
         Instance appInstance(APP_NAME, APP_VERSION, enabledExtensions);
+        System vrSystem = appInstance.getVRSystem();
         
     } catch (std::exception& ex) {
         std::cerr << "An error occured." << std::endl

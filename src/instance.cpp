@@ -21,3 +21,7 @@ Instance::Instance(const char* appName, unsigned int appVersion, std::vector<con
 Instance::~Instance() {
     xrDestroyInstance(this->instance);
 }
+
+System Instance::getVRSystem() const {
+    return System(this->instance);
+}
