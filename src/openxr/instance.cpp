@@ -1,6 +1,6 @@
-#include "instance.hpp"
+#include "openxr/instance.hpp"
 
-#include "exception.hpp"
+#include "openxr/exception.hpp"
 
 Instance::Instance(const char* appName, unsigned int appVersion, std::vector<const char*> extensions) {
     XrInstanceCreateInfo creationInfo = { XR_TYPE_INSTANCE_CREATE_INFO };
@@ -20,4 +20,8 @@ Instance::Instance(const char* appName, unsigned int appVersion, std::vector<con
 
 Instance::~Instance() {
     xrDestroyInstance(this->instance);
+}
+
+System Instance::getVRSystem() const {
+    return System(this->instance);
 }

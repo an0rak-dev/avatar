@@ -1,6 +1,6 @@
-#include "extensioncatalog.hpp"
+#include "openxr/extensioncatalog.hpp"
 
-#include "exception.hpp"
+#include "openxr/exception.hpp"
 
 #define EXTENSION_MAX_SIZE 64
 

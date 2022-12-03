@@ -3,8 +3,8 @@
 #include <vector>
 #include <string>
 
-#include "extensioncatalog.hpp"
-#include "instance.hpp"
+#include "openxr/extensioncatalog.hpp"
+#include "openxr/instance.hpp"
 
 #ifdef DEBUG
 #define APP_NAME "Avatar [Debug]"
@@ -24,6 +24,7 @@ int main() {
         });
 
         Instance appInstance(APP_NAME, APP_VERSION, enabledExtensions);
+        System vrSystem = appInstance.getVRSystem();
         
     } catch (std::exception& ex) {
         std::cerr << "An error occured." << std::endl
