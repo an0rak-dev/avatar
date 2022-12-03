@@ -3,8 +3,8 @@
 #include <vector>
 #include <string>
 
-#include "extensioncatalog.hpp"
-#include "instance.hpp"
+#include "openxr/extensioncatalog.hpp"
+#include "openxr/instance.hpp"
 
 #ifdef DEBUG
 #define APP_NAME "Avatar [Debug]"
@@ -15,9 +15,6 @@
 #ifndef APP_VERSION // Release versions should define on command line this flag (unsigned int).
 #define APP_VERSION 0
 #endif
-
-#include "thirdparties/openxr/openxr.h"
-#include "exception.hpp"
 
 int main() {
     try {

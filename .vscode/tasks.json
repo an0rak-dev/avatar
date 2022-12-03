@@ -24,6 +24,7 @@
                 "/Fd${workspaceFolder}\\bin\\debug\\",
                 "/Fo${workspaceFolder}\\bin\\debug\\",
                 "${workspaceFolder}\\lib\\statics\\openxr_loader.lib",
+                "${workspaceFolder}\\src\\openxr\\*.cpp",
                 "${workspaceFolder}\\src\\*.cpp"
             ],
             "options": {

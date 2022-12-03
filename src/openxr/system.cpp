@@ -1,6 +1,6 @@
-#include "system.hpp"
+#include "openxr/system.hpp"
 
-#include "exception.hpp"
+#include "openxr/exception.hpp"
 
 System::System(const XrInstance &instance) {
     XrSystemGetInfo getSystemInfo = { XR_TYPE_SYSTEM_GET_INFO };
