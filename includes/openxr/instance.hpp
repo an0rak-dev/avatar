@@ -13,6 +13,8 @@ public:
 
     System getVRSystem() const;
 
-private:
+
     XrInstance instance;    
+private:
+    
 };

@@ -7,6 +7,8 @@ public:
     System(const XrInstance &instance);
     virtual ~System();
 
-private:
+
     XrSystemId systemId;
+private:
+    
 };
