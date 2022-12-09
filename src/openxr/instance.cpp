@@ -22,6 +22,6 @@ Instance::~Instance() {
     xrDestroyInstance(this->instance);
 }
 
-System Instance::getVRSystem() const {
-    return System(this->instance);
+System Instance::getVRSystem(GraphicRequirement &requirement) const {
+    return System(this->instance, requirement);
 }

@@ -23,18 +23,13 @@ int main() {
         std::vector<const char*> enabledExtensions = extensionsCatalog.extractEnabledExtensions({
             XR_EXT_D3D12
         });
-
-        Instance appInstance(APP_NAME, APP_VERSION, enabledExtensions);
-        System vrSystem = appInstance.getVRSystem();
-        
         Dx12Requirement requirement({D3D_FEATURE_LEVEL_12_1,
                                     D3D_FEATURE_LEVEL_12_0,
                                     D3D_FEATURE_LEVEL_11_1,
                                     D3D_FEATURE_LEVEL_11_0});
-        if (!requirement.validate(appInstance.instance, vrSystem.systemId)) {
-            std::cerr << "Your system doesn't support the minimal graphic configuration required" << std::endl;
-            return 2;
-        }
+
+        Instance appInstance(APP_NAME, APP_VERSION, enabledExtensions);
+        System vrSystem = appInstance.getVRSystem(requirement);
     } catch (std::exception& ex) {
         std::cerr << "An error occured." << std::endl
             << ex.what() << std::endl;
