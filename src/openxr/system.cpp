@@ -10,8 +10,30 @@ System::System(const XrInstance &instance, GraphicRequirement &requirement) {
     if (!requirement.validate(instance, this->systemId)) { 
         throw Exception("Your system doesn't support the minimal graphic configuration required");
     }
+
+    this->properties = { XR_TYPE_SYSTEM_PROPERTIES };
+    result = xrGetSystemProperties(instance, this->systemId, &this->properties);
+    XRASSERT(result, "Unable to access the system properties");
 }
 
 System::~System() {
 
+}
+
+const char* System::getName() {
+    return this->properties.systemName;
+}
+
+float System::getImageRatio() {
+    float width = float(this->properties.graphicsProperties.maxSwapchainImageWidth);
+    float height = float(this->properties.graphicsProperties.maxSwapchainImageHeight);
+    return width / height;
+}
+
+bool System::isTrackingOrientation() {
+    return this->properties.trackingProperties.orientationTracking;
+}
+
+bool System::isTrackingPosition() {
+    return this->properties.trackingProperties.positionTracking;
 }
