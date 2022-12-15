@@ -17,7 +17,7 @@
 #define APP_VERSION 0
 #endif
 
-// IDEA(an0rak): Find a way to reduce build time by skipping untouched source files
+// TODO(an0rak): Find a way to reduce build time by skipping untouched source files
 int main() {
     try {
         ExtensionCatalog extensionsCatalog;
@@ -35,7 +35,6 @@ int main() {
         std::cout << std::endl << " System configuration" << std::endl
                   << "============================" << std::endl
                   << "Name                 : " << vrSystem.getName() << std::endl
-                  << "Image max ratio      : " << vrSystem.getImageRatio() << std::endl
                   << "Orientation tracking : " << (vrSystem.isTrackingOrientation() ? "yes" : "no") << std::endl
                   << "Position tracking    : " << (vrSystem.isTrackingPosition() ? "yes" : "no") << std::endl
                   << std::endl;

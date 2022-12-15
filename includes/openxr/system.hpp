@@ -12,7 +12,6 @@ public:
     virtual ~System();
 
     const char* getName();
-    float getImageRatio();
     bool isTrackingOrientation();
     bool isTrackingPosition();
 

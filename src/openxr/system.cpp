@@ -24,12 +24,6 @@ const char* System::getName() {
     return this->properties.systemName;
 }
 
-float System::getImageRatio() {
-    float width = float(this->properties.graphicsProperties.maxSwapchainImageWidth);
-    float height = float(this->properties.graphicsProperties.maxSwapchainImageHeight);
-    return width / height;
-}
-
 bool System::isTrackingOrientation() {
     return this->properties.trackingProperties.orientationTracking;
 }
