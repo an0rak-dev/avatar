@@ -1,5 +1,6 @@
 #include "openxr/system.hpp"
 
+#include <iostream>
 #include "openxr/exception.hpp"
 
 System::System(const XrInstance &instance, GraphicRequirement &requirement) {
@@ -30,4 +31,13 @@ bool System::isTrackingOrientation() {
 
 bool System::isTrackingPosition() {
     return this->properties.trackingProperties.positionTracking;
+}
+
+void System::printConfig(std::ostream &out) {
+    out << std::endl << " System configuration" << std::endl
+        << "============================" << std::endl
+        << "Name                 : " << this->getName() << std::endl
+        << "Orientation tracking : " << (this->isTrackingOrientation() ? "yes" : "no") << std::endl
+        << "Position tracking    : " << (this->isTrackingPosition() ? "yes" : "no") << std::endl
+        << std::endl;
 }

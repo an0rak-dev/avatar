@@ -14,6 +14,7 @@ public:
     const char* getName();
     bool isTrackingOrientation();
     bool isTrackingPosition();
+    void printConfig(std::ostream &out);
 
 private:
     XrSystemId systemId;

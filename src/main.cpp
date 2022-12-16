@@ -32,12 +32,7 @@ int main() {
         Instance appInstance(APP_NAME, APP_VERSION, enabledExtensions);
         System vrSystem = appInstance.getVRSystem(requirement);
 
-        std::cout << std::endl << " System configuration" << std::endl
-                  << "============================" << std::endl
-                  << "Name                 : " << vrSystem.getName() << std::endl
-                  << "Orientation tracking : " << (vrSystem.isTrackingOrientation() ? "yes" : "no") << std::endl
-                  << "Position tracking    : " << (vrSystem.isTrackingPosition() ? "yes" : "no") << std::endl
-                  << std::endl;
+        vrSystem.printConfig(std::cout);
 
     } catch (std::exception& ex) {
         std::cerr << "An error occured." << std::endl
