@@ -21,7 +21,7 @@
 int main() {
     try {
         ExtensionCatalog extensionsCatalog;
-        std::vector<const char*> enabledExtensions = extensionsCatalog.extractEnabledExtensions({ // TODO(an0rak): method names should start with an Uppercase
+        std::vector<const char*> enabledExtensions = extensionsCatalog.extractEnabledExtensions({
             XR_EXT_D3D12
         });
         Dx12Requirement requirement({D3D_FEATURE_LEVEL_12_1,
