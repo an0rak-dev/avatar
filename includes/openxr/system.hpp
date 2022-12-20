@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 #include "thirdparties/openxr/openxr.h"
 
 #include "graphicrequirement.hpp"

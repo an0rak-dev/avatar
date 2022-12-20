@@ -5,7 +5,7 @@
 
 #include "openxr/extensioncatalog.hpp"
 #include "openxr/instance.hpp"
-#include "openxr/dx12requirement.hpp"
+#include "openxr/extensions/dx12requirement.hpp"
 
 #ifdef DEBUG
 #define APP_NAME "Avatar [Debug]"
